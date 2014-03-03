@@ -37,10 +37,12 @@ namespace
 SceneObject::SceneObject(
                          const cinder::AxisAlignedBox3f& box,
                          const cinder::gl::VboMeshRef& mesh,
-                         const std::shared_ptr<SceneNode>& node):
+                         const std::shared_ptr<SceneNode>& node,
+                         const std::shared_ptr<MaterialInstance>& material):
 m_boundingBox(box),
 m_mesh(mesh),
 m_node(node),
+m_material(material),
 m_id(g_seed.seed++)
 {
     
@@ -65,6 +67,11 @@ VboMeshRef& SceneObject::GetMesh()
 shared_ptr<SceneNode>& SceneObject::GetSceneNode()
 {
     return m_node;
+}
+
+shared_ptr<MaterialInstance>& SceneObject::GetMaterial()
+{
+    return m_material;
 }
 
 void Scene::GetRenderSet(const cinder::Camera &camera, std::vector<std::shared_ptr<SceneObject>>* renderSet)

@@ -15,7 +15,8 @@ namespace TreePaint
 {
     class Renderer
     {
-        void Render(const std::vector<std::shared_ptr<SceneObject>>& renderSet);
+    public:
+        void Render(const cinder::Camera& camera, const std::vector<std::shared_ptr<SceneObject>>& renderSet);
         
     };
 }

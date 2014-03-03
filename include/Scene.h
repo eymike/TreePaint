@@ -9,6 +9,7 @@
 #ifndef TreePaint_Scene_h
 #define TreePaint_Scene_h
 
+#include "Material.h"
 #include "SceneNode.h"
 
 namespace TreePaint
@@ -18,17 +19,20 @@ namespace TreePaint
     public:
         SceneObject(const cinder::AxisAlignedBox3f& box,
                     const cinder::gl::VboMeshRef& mesh,
-                    const std::shared_ptr<SceneNode>& node);
+                    const std::shared_ptr<SceneNode>& node,
+                    const std::shared_ptr<MaterialInstance>& material);
         
         UInt32 GetID() const;
         cinder::AxisAlignedBox3f GetBoundingBox() const;
         cinder::gl::VboMeshRef& GetMesh();
         std::shared_ptr<SceneNode>& GetSceneNode();
+        std::shared_ptr<MaterialInstance>& GetMaterial();
     private:
         const UInt32 m_id;
         cinder::AxisAlignedBox3f m_boundingBox;
         cinder::gl::VboMeshRef m_mesh;
         std::shared_ptr<SceneNode> m_node;
+        std::shared_ptr<MaterialInstance> m_material;
     };
     
     class Scene
