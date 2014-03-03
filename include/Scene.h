@@ -17,6 +17,8 @@ namespace TreePaint
     class SceneObject
     {
     public:
+        SceneObject(const cinder::TriMesh& mesh, const std::shared_ptr<MaterialInstance>& material);
+        
         SceneObject(const cinder::AxisAlignedBox3f& box,
                     const cinder::gl::VboMeshRef& mesh,
                     const std::shared_ptr<SceneNode>& node,

@@ -1,9 +1,15 @@
 #include "TreePaint_Prefix.pch"
+
 #include "cinder/app/AppNative.h"
 
 #include "cinder/Camera.h"
 #include "cinder/gl/gl.h"
 
+#include "Resources.h"
+
+#include "MeshHelper.h"
+
+#include "Material.h"
 #include "SceneNode.h"
 #include "Scene.h"
 #include "Renderer.h"
@@ -23,12 +29,21 @@ class TreePaintApp : public AppNative {
     
     CameraPersp m_camera;
     
+    std::shared_ptr<Material> m_basicMaterial;
+    
     Scene m_scene;
     TreePaint::Renderer m_renderer;
 };
 
 void TreePaintApp::setup()
 {
+    auto shader = gl::GlslProg(loadResource(RES_GLSL_BASICVERTEX), loadResource(RES_GLSL_BASICFRAG));
+    
+    m_basicMaterial = make_shared<Material>(shader);
+    
+    auto sphere = make_shared<SceneObject>(MeshHelper::createSphere(), make_shared<MaterialInstance>(m_basicMaterial));
+    
+    m_scene.AddSceneObject(sphere);
     
 }
 

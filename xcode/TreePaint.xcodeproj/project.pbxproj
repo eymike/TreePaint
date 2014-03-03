@@ -22,6 +22,9 @@
 		ECB252E518C06955009D7E2B /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252E418C06955009D7E2B /* Renderer.cpp */; };
 		ECB252E818C1AC3F009D7E2B /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252E718C1AC3F009D7E2B /* Scene.cpp */; };
 		ECB252EC18C2FDA1009D7E2B /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252EA18C2FDA1009D7E2B /* Material.cpp */; };
+		ECB252EF18C44497009D7E2B /* BasicFrag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = ECB252ED18C44497009D7E2B /* BasicFrag.glsl */; };
+		ECB252F018C44497009D7E2B /* BasicVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = ECB252EE18C44497009D7E2B /* BasicVertex.glsl */; };
+		ECB252F218C45667009D7E2B /* MeshHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252F118C45667009D7E2B /* MeshHelper.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,10 @@
 		ECB252E718C1AC3F009D7E2B /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = ../src/Scene.cpp; sourceTree = "<group>"; };
 		ECB252E918C2FD83009D7E2B /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../include/Material.h; sourceTree = "<group>"; };
 		ECB252EA18C2FDA1009D7E2B /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = ../src/Material.cpp; sourceTree = "<group>"; };
+		ECB252ED18C44497009D7E2B /* BasicFrag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BasicFrag.glsl; path = ../resources/BasicFrag.glsl; sourceTree = "<group>"; };
+		ECB252EE18C44497009D7E2B /* BasicVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BasicVertex.glsl; path = ../resources/BasicVertex.glsl; sourceTree = "<group>"; };
+		ECB252F118C45667009D7E2B /* MeshHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshHelper.cpp; path = ../src/MeshHelper.cpp; sourceTree = "<group>"; };
+		ECB252F318C45677009D7E2B /* MeshHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeshHelper.h; path = ../include/MeshHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,7 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ECB252F118C45667009D7E2B /* MeshHelper.cpp */,
 				ECB252E718C1AC3F009D7E2B /* Scene.cpp */,
 				ECB252E418C06955009D7E2B /* Renderer.cpp */,
 				ECAF5B4618BF0939003187E5 /* Transform.cpp */,
@@ -140,6 +148,7 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				ECB252F318C45677009D7E2B /* MeshHelper.h */,
 				ECB252E318C0694B009D7E2B /* Renderer.h */,
 				ECB252E618C1AC30009D7E2B /* Scene.h */,
 				ECAF5B4818BF0947003187E5 /* Transform.h */,
@@ -154,6 +163,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ECB252ED18C44497009D7E2B /* BasicFrag.glsl */,
+				ECB252EE18C44497009D7E2B /* BasicVertex.glsl */,
 				D045E9EF2CB54DE5989EEF81 /* CinderApp.icns */,
 				068B0E750DA94293804409FB /* Info.plist */,
 			);
@@ -222,6 +233,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB252EF18C44497009D7E2B /* BasicFrag.glsl in Resources */,
+				ECB252F018C44497009D7E2B /* BasicVertex.glsl in Resources */,
 				80246707F10B45B5B95CF1E2 /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +251,7 @@
 				ECB252EC18C2FDA1009D7E2B /* Material.cpp in Sources */,
 				ECAF5B4718BF0939003187E5 /* Transform.cpp in Sources */,
 				ECB252E818C1AC3F009D7E2B /* Scene.cpp in Sources */,
+				ECB252F218C45667009D7E2B /* MeshHelper.cpp in Sources */,
 				36FCD218331947ED864DFD9A /* TreePaintApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

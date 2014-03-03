@@ -10,6 +10,7 @@
 
 #include "cinder/AxisAlignedBox.h"
 #include "cinder/Frustum.h"
+#include "cinder/gl/Vbo.h"
 
 #include <atomic>
 #include "SceneNode.h"
@@ -32,6 +33,15 @@ namespace
     };
     
     IDSource g_seed;
+}
+
+SceneObject::SceneObject(const cinder::TriMesh& mesh, const std::shared_ptr<MaterialInstance>& material):
+m_id(g_seed.seed++),
+m_material(material),
+m_node(move(make_shared<SceneNode>()))
+{
+    m_mesh = VboMesh::create(mesh);
+    m_boundingBox = mesh.calcBoundingBox();
 }
 
 SceneObject::SceneObject(

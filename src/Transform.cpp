@@ -13,9 +13,9 @@ using namespace cinder;
 using namespace TreePaint;
 
 Transform::Transform():
-    m_position(0, 0, 0),
-    m_rotation(0, 0, 0, 1),
-    m_scale(1, 1, 1)
+m_position(Vec3f::zero()),
+m_rotation(Quatf::identity()),
+m_scale(Vec3f::one())
 {}
 
 Transform::Transform(
