@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,13 +12,16 @@
 		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		36FCD218331947ED864DFD9A /* TreePaintApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71A58D57B9AC46858D0E87DF /* TreePaintApp.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
-		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		EC2A6020EFBC45088C5A6DBC /* TreePaint_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 90FA8D2DEE9143DB9FA7F8D9 /* TreePaint_Prefix.pch */; };
 		80246707F10B45B5B95CF1E2 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = D045E9EF2CB54DE5989EEF81 /* CinderApp.icns */; };
-		35541375BCBD4C8BBA115A1F /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 529CB4D574594A74847D1DE4 /* Resources.h */; };
-		36FCD218331947ED864DFD9A /* TreePaintApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71A58D57B9AC46858D0E87DF /* TreePaintApp.cpp */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		ECAF5B4718BF0939003187E5 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECAF5B4618BF0939003187E5 /* Transform.cpp */; };
+		ECB252E218BF1239009D7E2B /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252E018BF1239009D7E2B /* SceneNode.cpp */; };
+		ECB252E518C06955009D7E2B /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252E418C06955009D7E2B /* Renderer.cpp */; };
+		ECB252E818C1AC3F009D7E2B /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252E718C1AC3F009D7E2B /* Scene.cpp */; };
+		ECB252EC18C2FDA1009D7E2B /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECB252EA18C2FDA1009D7E2B /* Material.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,17 +30,28 @@
 		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		068B0E750DA94293804409FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		529CB4D574594A74847D1DE4 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		71A58D57B9AC46858D0E87DF /* TreePaintApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = TreePaintApp.cpp; path = ../src/TreePaintApp.cpp; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TreePaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreePaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		71A58D57B9AC46858D0E87DF /* TreePaintApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../src/TreePaintApp.cpp; sourceTree = "<group>"; name = TreePaintApp.cpp; };
-		529CB4D574594A74847D1DE4 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../include/Resources.h; sourceTree = "<group>"; name = Resources.h; };
-		D045E9EF2CB54DE5989EEF81 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; name = CinderApp.icns; };
-		068B0E750DA94293804409FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
-		90FA8D2DEE9143DB9FA7F8D9 /* TreePaint_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = TreePaint_Prefix.pch; sourceTree = "<group>"; name = TreePaint_Prefix.pch; };
+		90FA8D2DEE9143DB9FA7F8D9 /* TreePaint_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = TreePaint_Prefix.pch; sourceTree = "<group>"; };
+		D045E9EF2CB54DE5989EEF81 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		ECAF5B4618BF0939003187E5 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Transform.cpp; path = ../src/Transform.cpp; sourceTree = "<group>"; };
+		ECAF5B4818BF0947003187E5 /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = ../include/Transform.h; sourceTree = "<group>"; };
+		ECB252DF18BF121E009D7E2B /* SceneNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SceneNode.h; path = ../include/SceneNode.h; sourceTree = "<group>"; };
+		ECB252E018BF1239009D7E2B /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneNode.cpp; path = ../src/SceneNode.cpp; sourceTree = "<group>"; };
+		ECB252E318C0694B009D7E2B /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = ../include/Renderer.h; sourceTree = "<group>"; };
+		ECB252E418C06955009D7E2B /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = ../src/Renderer.cpp; sourceTree = "<group>"; };
+		ECB252E618C1AC30009D7E2B /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = ../include/Scene.h; sourceTree = "<group>"; };
+		ECB252E718C1AC3F009D7E2B /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = ../src/Scene.cpp; sourceTree = "<group>"; };
+		ECB252E918C2FD83009D7E2B /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../include/Material.h; sourceTree = "<group>"; };
+		ECB252EA18C2FDA1009D7E2B /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = ../src/Material.cpp; sourceTree = "<group>"; };
+		ECB252EB18C2FDA1009D7E2B /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../src/Material.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ECB252E718C1AC3F009D7E2B /* Scene.cpp */,
+				ECB252E418C06955009D7E2B /* Renderer.cpp */,
+				ECAF5B4618BF0939003187E5 /* Transform.cpp */,
 				71A58D57B9AC46858D0E87DF /* TreePaintApp.cpp */,
+				ECB252E018BF1239009D7E2B /* SceneNode.cpp */,
+				ECB252EA18C2FDA1009D7E2B /* Material.cpp */,
+				ECB252EB18C2FDA1009D7E2B /* Material.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -112,18 +139,16 @@
 			name = TreePaint;
 			sourceTree = "<group>";
 		};
-		01B97315FEAEA392516A2CEA /* Blocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Blocks;
-			sourceTree = "<group>";
-		};
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				ECB252E318C0694B009D7E2B /* Renderer.h */,
+				ECB252E618C1AC30009D7E2B /* Scene.h */,
+				ECAF5B4818BF0947003187E5 /* Transform.h */,
 				529CB4D574594A74847D1DE4 /* Resources.h */,
 				90FA8D2DEE9143DB9FA7F8D9 /* TreePaint_Prefix.pch */,
+				ECB252DF18BF121E009D7E2B /* SceneNode.h */,
+				ECB252E918C2FD83009D7E2B /* Material.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -172,6 +197,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TreePaint" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -207,6 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB252E518C06955009D7E2B /* Renderer.cpp in Sources */,
+				ECB252E218BF1239009D7E2B /* SceneNode.cpp in Sources */,
+				ECB252EC18C2FDA1009D7E2B /* Material.cpp in Sources */,
+				ECAF5B4718BF0939003187E5 /* Transform.cpp in Sources */,
+				ECB252E818C1AC3F009D7E2B /* Scene.cpp in Sources */,
 				36FCD218331947ED864DFD9A /* TreePaintApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,24 +250,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TreePaint_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TreePaint_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
 				PRODUCT_NAME = TreePaint;
-				WRAPPER_EXTENSION = app;
 				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -257,19 +289,19 @@
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
 				PRODUCT_NAME = TreePaint;
 				STRIP_INSTALLED_PRODUCT = YES;
-				WRAPPER_EXTENSION = app;
 				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = i386;
-				CINDER_PATH = "../../lib/cinder_0.8.5_mac";
+				CINDER_PATH = ../../lib/cinder_0.8.5_mac;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
@@ -282,11 +314,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = i386;
-				CINDER_PATH = "../../lib/cinder_0.8.5_mac";
+				CINDER_PATH = ../../lib/cinder_0.8.5_mac;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";

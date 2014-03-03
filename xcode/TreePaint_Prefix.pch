@@ -8,9 +8,14 @@
 	#include "cinder/app/AppBasic.h"
 	
 	#include "cinder/gl/gl.h"
-	
+
+    #include "cinder/AxisAlignedBox.h"
 	#include "cinder/CinderMath.h"
 	#include "cinder/Matrix.h"
 	#include "cinder/Vector.h"
 	#include "cinder/Quaternion.h"
+
+    #include <memory>
+    #include <vector>
+
 #endif
