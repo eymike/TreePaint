@@ -37,11 +37,13 @@ class TreePaintApp : public AppNative {
 
 void TreePaintApp::setup()
 {
+    setWindowSize(1280, 720);
+    
     auto shader = gl::GlslProg(loadResource(RES_GLSL_BASICVERTEX), loadResource(RES_GLSL_BASICFRAG));
     
     m_basicMaterial = make_shared<Material>(shader);
     
-    auto sphere = make_shared<SceneObject>(MeshHelper::createSphere(), make_shared<MaterialInstance>(m_basicMaterial));
+    auto sphere = make_shared<SceneObject>(MeshHelper::createSphere(Vec2i(30,30)), make_shared<MaterialInstance>(m_basicMaterial));
     
     m_scene.AddSceneObject(sphere);
     
@@ -51,6 +53,8 @@ void TreePaintApp::resize()
 {
     m_camera.lookAt( Vec3f( 0.0f, 0.0f, 5.0f ), Vec3f::zero() );
 	m_camera.setPerspective( 60, getWindowAspectRatio(), 1, 40 );
+    const auto bounds = getWindowBounds();
+    m_renderer.Reset(bounds.getWidth(), bounds.getHeight());
 
 }
 
@@ -73,6 +77,7 @@ void TreePaintApp::draw()
     m_scene.GetRenderSet(m_camera, &renderSet);
     
     m_renderer.Render(m_camera, renderSet);
+    m_renderer.RenderDebugTargets(0.25f);
     
 }
 
